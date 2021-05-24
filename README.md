@@ -2,7 +2,7 @@
 Clean PHP Open Source without framework
 
 ## Future
- - Route System
+ - Fasted Route System
  - Template System
  - Language System
  - Theme System
