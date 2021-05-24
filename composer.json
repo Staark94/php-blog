@@ -1,0 +1,32 @@
+{
+    "name": "staark/blog",
+    "description": "PHP Blog Framework",
+    "type": "projetc",
+    "require": {
+        "php": ">=7.2",
+        "ext-mbstring": "*",
+        "ext-json": "*",
+        "vlucas/phpdotenv": "5.3.x-dev"
+    },
+    "autoload": {
+        "files": [
+            "config.php",
+            "application/routes.php"
+        ],
+        "psr-4": {
+            "App\\": "application/",
+            "Core\\": "core/"
+        }
+    },
+    "require-dev": {
+        "vlucas/phpdotenv": "5.3.x-dev"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Costin Ionut",
+            "email": "ionuzcostin@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
