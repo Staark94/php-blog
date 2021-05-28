@@ -309,6 +309,7 @@ class Router {
             }
         }
 
+        
         if($callback == false) 
             return (new Response())->setResponse(404);
 
@@ -322,10 +323,15 @@ class Router {
             $callback[0] = $controller;
         }
 
-        if(!empty($args)) {
+        if(is_callable($callback)) {
+            call_user_func($callback, [new Request(), new Response()]);
+        }
+        
+
+        /*if(!empty($args)) {
             return call_user_func_array($callback, [$args, new Request(), new Response()]);
         } else {
             return call_user_func($callback, new Request(), new Response());
-        }
+        }*/
     }
 }

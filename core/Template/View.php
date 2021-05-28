@@ -19,6 +19,8 @@ class View {
     public static $_model;
 
     public static function renderLayout() {
+        global $localhost;
+        
         if(file_exists(THEMES_PATH)) {
             /**
              * Store cache on views
@@ -55,7 +57,7 @@ class View {
             }
 
             $file = preg_replace("/{{ page_title }}/i", self::name(), $file);
-            $file = preg_replace("/{{ THEMES_PATH }}/i", THEMES_PATH, $file);
+            $file = preg_replace("/{{ THEMES_PATH }}/i", $localhost, $file);
 
             preg_match_all('/{% ?(parts) ?\'?(.*?)\'? ?%}/i', $file, $matches, PREG_SET_ORDER);
 

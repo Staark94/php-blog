@@ -6,6 +6,13 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\controller\\Admin\\DashBoard' => $baseDir . '/application/controller/Admin/DashBoard.php',
+    'App\\controller\\Controller' => $baseDir . '/application/controller/Controller.php',
+    'App\\controller\\HomeController' => $baseDir . '/application/controller/HomeController.php',
+    'App\\model\\Auth' => $baseDir . '/application/model/Auth.php',
+    'App\\model\\Category' => $baseDir . '/application/model/Category.php',
+    'App\\model\\Posts' => $baseDir . '/application/model/Posts.php',
+    'App\\model\\User' => $baseDir . '/application/model/User.php',
     'Attribute' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'Core\\Application' => $baseDir . '/core/Application.php',
@@ -17,6 +24,7 @@ return array(
     'Core\\Http\\Request' => $baseDir . '/core/Http/Request.php',
     'Core\\Http\\Response' => $baseDir . '/core/Http/Response.php',
     'Core\\Http\\Router' => $baseDir . '/core/Http/Router.php',
+    'Core\\Model' => $baseDir . '/core/Model.php',
     'Core\\Template\\View' => $baseDir . '/core/Template/View.php',
     'Dotenv\\Dotenv' => $vendorDir . '/vlucas/phpdotenv/src/Dotenv.php',
     'Dotenv\\Exception\\ExceptionInterface' => $vendorDir . '/vlucas/phpdotenv/src/Exception/ExceptionInterface.php',

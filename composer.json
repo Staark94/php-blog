@@ -10,7 +10,7 @@
     },
     "autoload": {
         "files": [
-            "config.php",
+            "application/config/config.php",
             "application/routes.php"
         ],
         "psr-4": {

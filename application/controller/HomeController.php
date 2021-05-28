@@ -1,5 +1,5 @@
 <?php
-namespace App\Controller;
+namespace App\controller;
 
 use App\model\Posts;
 use Core\Template\View;
@@ -8,8 +8,10 @@ class HomeController extends Controller {
     public $model;
 
     public function __construct() {
-        View::$model = ['Auth', 'Posts', 'Category'];
-        View::name('Home Page');
+        parent::__construct();
+
+        $this->model_load('Posts');
+        $this->pageName('Home Page');
         $this->model = new Posts();
     }
 
