@@ -16,6 +16,7 @@ class View {
     protected static $ext = '.phtml';
     public static $title;
 	public static $model;
+    public static array $_vars = [];
     public static $_model;
 
     public static function renderLayout() {
@@ -56,7 +57,7 @@ class View {
                 }
             }
 
-            $file = preg_replace("/{{ page_title }}/i", self::name(), $file);
+            $file = preg_replace("/{{ page_title }}/i", self::name(self::$title), $file);
             $file = preg_replace("/{{ THEMES_PATH }}/i", $localhost, $file);
 
             preg_match_all('/{% ?(parts) ?\'?(.*?)\'? ?%}/i', $file, $matches, PREG_SET_ORDER);
@@ -64,6 +65,14 @@ class View {
             foreach ($matches as $value) {
                 $file = str_replace($value[0], self::renderParts($value[2]), $file);
             }
+
+            if(!empty(self::$_vars)) {
+                foreach(self::$_vars as $keys => $values) {
+                    $$keys = $values;
+                }
+            }
+    
+            extract(self::$_vars);
 
             return $file;
         } else {
@@ -97,7 +106,7 @@ class View {
                         
             if(is_array(self::$model)) {
                 foreach(self::$model as $key => $model) {
-                    self::$model[$key] = "use \App\Model\\" . $model . "; $". strtolower($model) ." = new $model();";
+                    self::$model[$key] = "use \App\Model\\" . $model . "; $". strtolower($model) ." = new $model()";
                 }
                 
 				self::$model = implode('; ', self::$model);
@@ -110,8 +119,11 @@ class View {
 
 			if(is_array(self::$model)) {
                 foreach(self::$model as $key => $model) {
-                    self::$model[$key] = "use \App\Model\\" . $model . "; $". strtolower($model) ." = new $model();";
+                    self::$model[$key] = "use \App\Model\\" . $model . "; $". strtolower($model) ." = new $model()";
                 }
+
+                //array_push($model->errors, self::$_vars);
+                //var_dump($model->errors);
 
 				self::$model = implode('; ', self::$model);
 			}
@@ -159,6 +171,14 @@ class View {
 			$$key = $value;
 		}
 
+        if(!empty(self::$_vars)) {
+            foreach(self::$_vars as $keys => $values) {
+                $$keys = $values;
+            }
+        }
+
+        extract(self::$_vars);
+
         $code = file_get_contents(trim(THEMES_PATH, '/') . $view . self::$ext);
 		preg_match_all('/{% ?(extends|include) ?\'?(.*?)\'? ?%}/i', $code, $matches, PREG_SET_ORDER);
 		
@@ -174,7 +194,6 @@ class View {
         $code = str_replace("{{ site_url() }}", Url::site_url(), $code);
         $code = preg_replace("/{{ url_to\('(.*?)'\) }}/i", Url::url_to("$1"), $code);
         $code = preg_replace("/{{ url_from\('(.*?)', \[(.*?)\]\) }}/i", Url::url_from("$1", ["$2"]), $code);
-        $code = str_replace("{{ page_title }}", self::name(), $code);
 
         /**
          * Language translate
@@ -203,12 +222,14 @@ class View {
 		return $code;
 	}
 
-    public static function name(string $title = "") {
-        if(is_null(self::$title)) {
-            self::$title = $title;
+    public static function name(string $title) {
+        
+        if(!empty($title)) {
+            self::$title = " - " . $title;
         }
 
-        return self::$title;
+        self::$title = str_replace("-", " ", self::$title);
+        return env('APP_NAME') . " -" . self::$title;
     }
 
     private static function compilePHP($code) {
@@ -250,4 +271,20 @@ class View {
 
 		return $code;
 	}
+
+    public static function getErrors() {
+        if(!empty(self::$_vars)) {
+            foreach(self::$_vars as $key => $item) {
+                $itemName = $key;
+                foreach($item as $value) {
+                    $result[] = "<b style='color: red'>*</b>" . ucfirst($itemName) . ": " . $value . "\r\n";
+                }
+            }
+        }
+
+        if(!empty($result)) {
+            return implode("<br />", $result);
+        }
+        return null;
+    }
 }

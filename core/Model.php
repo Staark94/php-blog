@@ -11,7 +11,8 @@ abstract class Model {
     protected $dbh;
     protected array $fillable = [];
     protected string $table = "";
-    public array $errors = [];
+    protected array $errors = [];
+    protected static $instance;
 
     const RULE_REQUIRED = 'required';
     const RULE_EMAIL = 'email';
@@ -23,6 +24,7 @@ abstract class Model {
 
     public function __construct() {
         $this->dbh = DB::getInstance();
+        self::$instance =& $this;
     }
 
     public function loadData(array $data) {
@@ -58,7 +60,6 @@ abstract class Model {
     public function validate() {
         foreach ($this->rules() as $attribute => $rules) {
             $value = $this->fillable[$attribute];
-            var_dump($value);
 
             foreach ($rules as $rule) {
                 $ruleName = $rule;
