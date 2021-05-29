@@ -5,7 +5,7 @@ namespace App\controller;
 use Core\Database\DB;
 use Core\Http\Request;
 use Core\Http\Response;
-use Core\Loader\S_Loader;
+use Core\Logs\Logger;
 use Core\Template\View;
 
 class Controller {
@@ -15,6 +15,7 @@ class Controller {
     public $model = null;
     protected $load = null;
     public Response $response;
+    public Request $request;
 
     public function __construct() {
         self::$instance =& $this;
@@ -24,8 +25,14 @@ class Controller {
         $this->dbh = DB::getInstance();
         $this->model = null;
         $this->response = new Response();
-        //$this->load = new S_Loader();
-        //$this->load->initialize();
+        $this->request = new Request();
+
+        if(isset($_SESSION['login']) && time() >= $_SESSION['login']['expire']) {
+            unset($_SESSION['login']['succes']);
+            unset($_SESSION['login']['status']);
+        }
+
+        Logger::debug('Controllers init.');
     }
 
     public static function &get_instance()
@@ -38,6 +45,6 @@ class Controller {
     }
 
     public function pageName(string $name) {
-        return View::name($name);
+        View::name($name);
     }
 }

@@ -80,8 +80,11 @@ class ComposerStaticInit8abf708bb503b3836724b1a44834643d
 
     public static $classMap = array (
         'App\\controller\\Admin\\DashBoard' => __DIR__ . '/../..' . '/application/controller/Admin/DashBoard.php',
+        'App\\controller\\Auth\\Auth' => __DIR__ . '/../..' . '/application/controller/Auth/Auth.php',
         'App\\controller\\Controller' => __DIR__ . '/../..' . '/application/controller/Controller.php',
         'App\\controller\\HomeController' => __DIR__ . '/../..' . '/application/controller/HomeController.php',
+        'App\\controller\\Search' => __DIR__ . '/../..' . '/application/controller/Search.php',
+        'App\\controller\\Subscribe' => __DIR__ . '/../..' . '/application/controller/Subscribe.php',
         'App\\model\\Auth' => __DIR__ . '/../..' . '/application/model/Auth.php',
         'App\\model\\Category' => __DIR__ . '/../..' . '/application/model/Category.php',
         'App\\model\\Posts' => __DIR__ . '/../..' . '/application/model/Posts.php',
@@ -97,6 +100,7 @@ class ComposerStaticInit8abf708bb503b3836724b1a44834643d
         'Core\\Http\\Request' => __DIR__ . '/../..' . '/core/Http/Request.php',
         'Core\\Http\\Response' => __DIR__ . '/../..' . '/core/Http/Response.php',
         'Core\\Http\\Router' => __DIR__ . '/../..' . '/core/Http/Router.php',
+        'Core\\Loader\\S_Loader' => __DIR__ . '/../..' . '/core/Loader/S_Loader.php',
         'Core\\Model' => __DIR__ . '/../..' . '/core/Model.php',
         'Core\\Template\\View' => __DIR__ . '/../..' . '/core/Template/View.php',
         'Dotenv\\Dotenv' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Dotenv.php',

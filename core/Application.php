@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Core;
 use Core\Database\DB;
 use Core\Http\Router;
+use Core\Logs\Logger;
 
 class Application {
     public $config = [];
@@ -22,5 +23,7 @@ class Application {
     public function run() {
         $this->initConnection();
         Router::dispatch();
+        Logger::debug('Application init.');
+        Logger::debug('Router dispatch init.');
     }
 }
