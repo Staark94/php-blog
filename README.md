@@ -50,7 +50,9 @@ Coming soon
 `{{ url_from('url', [array]) }}`
     
 ### Parts Includes
-`{% parts part_name %}`
+`
+{% parts part_name %}
+`
 
 ## License
  - MIT

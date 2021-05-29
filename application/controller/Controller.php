@@ -33,6 +33,7 @@ class Controller {
         }
 
         Logger::debug('Controllers init.');
+        Logger::debug('Controller '. get_class($this) .' init.');
     }
 
     public static function &get_instance()
