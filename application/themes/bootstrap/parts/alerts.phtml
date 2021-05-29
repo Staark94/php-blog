@@ -1,0 +1,37 @@
+<div aria-live="polite" aria-atomic="true" class="position-relative">
+    <div class="toast-container position-absolute top-0 end-0 p-3">
+    {% if(isset($_SESSION['login']['succes'])): %}
+    <div class="toast mb-2 text-white bg-primary" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <strong class="me-auto">Welcome</strong>
+            <small class="text-muted">just now</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+
+        <div class="toast-body">
+            {{ $_SESSION['login']['succes'] }}
+        </div>
+    </div>
+    {% endif; %}
+
+
+    {% if(isset($_SESSION['login']['status'])): %}
+    <div class="toast mb-2 text-white bg-warning" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <strong class="me-auto">Account Info</strong>
+            <small class="text-muted">just now</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+
+        <div class="toast-body">
+            {{ $_SESSION['login']['status'] }}
+        </div>
+    </div>
+    {% endif; %}
+    </div>
+    <script type="text/javascript">
+    jQuery(function() {
+        jQuery ('.toast').toast('show');
+    });
+    </script>
+</div>

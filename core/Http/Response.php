@@ -21,6 +21,6 @@ class Response {
     }
 
     public function route(string $url) {
-        return header("Location: " . $url);
+        return header("Location: " . $url, true, 200);
     }
 }

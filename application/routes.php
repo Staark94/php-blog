@@ -39,7 +39,11 @@ Router::get('/user/register', [Auth::class, 'signup']);
 Router::get('/user/forgot', [Auth::class, 'forgot']);
 Router::get('/user/profile', [Auth::class, 'profile']);
 Router::get('/user/{id}', [Auth::class, 'index']);
+Router::get('/user/logout', [Auth::class, 'logout']);
 
+/**
+ * User post routes
+ */
 Router::post('/user/login', [Auth::class, 'login']);
 Router::post('/user/signup', [Auth::class, 'signup']);
 Router::post('/user/register', [Auth::class, 'signup']);

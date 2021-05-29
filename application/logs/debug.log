@@ -1,0 +1,12 @@
+(2021-05-29 06:05:12) [DEBUG]: Views template init.
+(2021-05-29 06:05:12) [DEBUG]: Controllers init.
+(2021-05-29 06:05:12) [DEBUG]: Controller App\controller\HomeController init.
+(2021-05-29 06:05:12) [DEBUG]: Models App\model\Posts init.
+(2021-05-29 06:05:12) [DEBUG]: Views Models Auth loaded.
+(2021-05-29 06:05:12) [DEBUG]: Views Models Category loaded.
+(2021-05-29 06:05:12) [DEBUG]: Views Models Posts loaded.
+(2021-05-29 06:05:12) [DEBUG]: Models App\model\Auth init.
+(2021-05-29 06:05:12) [DEBUG]: Models App\model\Category init.
+(2021-05-29 06:05:12) [DEBUG]: Models App\model\Posts init.
+(2021-05-29 06:05:12) [DEBUG]: Application init.
+(2021-05-29 06:05:12) [DEBUG]: Router dispatch init.
