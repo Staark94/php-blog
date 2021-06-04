@@ -19,7 +19,8 @@
         }
     },
     "require-dev": {
-        "vlucas/phpdotenv": "5.3.x-dev"
+        "vlucas/phpdotenv": "5.3.x-dev",
+        "phpunit/phpunit": "^9"
     },
     "license": "MIT",
     "authors": [
