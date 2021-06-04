@@ -5,7 +5,7 @@ declare(strict_types=1);
  * Start default session
  * session initialize
  */
-session_start();
+@session_start();
 
 /**
  * Dewfault time zone set

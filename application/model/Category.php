@@ -4,7 +4,8 @@ namespace App\model;
 use Core\Model;
 
 class Category extends Model {
-    protected string $table = "category";
+    protected $table = "category";
+    
     public function rules() : array { 
         return []; 
     }

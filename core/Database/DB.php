@@ -10,12 +10,12 @@ class DB {
     private static $instance = null;
 
     private $query;
-    public array $results;
-    public int $count = 0;
+    public $results = [];
+    public $count = 0;
     private $error = false;
 
-    private string $query_string = "";
-    private array $bindValues = array();
+    private $query_string = "";
+    private $bindValues = [];
     private $lastId;
     public $smtp;
 

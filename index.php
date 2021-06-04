@@ -130,7 +130,6 @@ if (!isset($view_folder[0]) && is_dir(APPPATH . 'themes' . DIRECTORY_SEPARATOR))
 	exit(3); // EXIT_CONFIG
 }
 
-
 // Path to the system directory
 define('VIEWPATH', $view_folder . DIRECTORY_SEPARATOR);
 define('CORE_PATH', 'core' . DIRECTORY_SEPARATOR);

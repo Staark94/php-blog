@@ -14,8 +14,8 @@ class Controller {
     public $dbh;
     public $model = null;
     protected $load = null;
-    public Response $response;
-    public Request $request;
+    public $response;
+    public $request;
 
     public function __construct() {
         self::$instance =& $this;

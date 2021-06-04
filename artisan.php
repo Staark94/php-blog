@@ -46,9 +46,9 @@ function writeFile($name = "", string $type = "*") {
         $model = "<?php\r\nnamespace App\model;".
         "\r\n\r\nuse Core\Model;".
         "\r\n\r\nclass ". ucfirst($name) ." extends Model {\r\n".
-            "   protected array @fillable = [];\r\n".
-            "   protected string @table = '';\r\n".
-            "   public array @errors = [];\r\n".
+            "   protected @fillable = [];\r\n".
+            "   protected @table = '';\r\n".
+            "   public @errors = [];\r\n".
 
             "\r\n\r\n".
             "   public function rules() : array {\r\n".

@@ -6,9 +6,9 @@ use Core\Model;
 use Core\Template\View;
 
 class Auth extends Model {
-    protected array $fillable = ['email', 'password'];
-    protected string $table = "users";
-    public array $errors = [];
+    protected $fillable = ['email', 'password'];
+    protected $table = "users";
+    public $errors = [];
 
     public function rules() : array {
         return [

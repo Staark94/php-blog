@@ -1,0 +1,147 @@
+(2021-06-04 10:06:47) [DEBUG]: Views template init.
+(2021-06-04 10:06:47) [DEBUG]: Controllers init.
+(2021-06-04 10:06:47) [DEBUG]: Controller App\controller\HomeController init.
+(2021-06-04 10:06:47) [DEBUG]: Views template init.
+(2021-06-04 10:06:47) [DEBUG]: Controllers init.
+(2021-06-04 10:06:47) [DEBUG]: Controller App\controller\HomeController init.
+(2021-06-04 10:06:48) [DEBUG]: Views template init.
+(2021-06-04 10:06:48) [DEBUG]: Controllers init.
+(2021-06-04 10:06:48) [DEBUG]: Controller App\controller\HomeController init.
+(2021-06-04 10:06:48) [DEBUG]: Models App\model\Posts init.
+(2021-06-04 10:06:48) [DEBUG]: Views Models Auth loaded.
+(2021-06-04 10:06:48) [DEBUG]: Views Models Category loaded.
+(2021-06-04 10:06:48) [DEBUG]: Views Models Posts loaded.
+(2021-06-04 10:06:48) [DEBUG]: Views template init.
+(2021-06-04 10:06:48) [DEBUG]: Controllers init.
+(2021-06-04 10:06:48) [DEBUG]: Controller App\controller\HomeController init.
+(2021-06-04 10:06:48) [DEBUG]: Models App\model\Posts init.
+(2021-06-04 10:06:48) [DEBUG]: Views Models Auth loaded.
+(2021-06-04 10:06:48) [DEBUG]: Views Models Category loaded.
+(2021-06-04 10:06:48) [DEBUG]: Views Models Posts loaded.
+(2021-06-04 10:06:48) [DEBUG]: Models App\model\Auth init.
+(2021-06-04 10:06:49) [DEBUG]: Views template init.
+(2021-06-04 10:06:49) [DEBUG]: Controllers init.
+(2021-06-04 10:06:49) [DEBUG]: Controller App\controller\HomeController init.
+(2021-06-04 10:06:49) [DEBUG]: Models App\model\Posts init.
+(2021-06-04 10:06:49) [DEBUG]: Views Models Auth loaded.
+(2021-06-04 10:06:49) [DEBUG]: Views Models Category loaded.
+(2021-06-04 10:06:49) [DEBUG]: Views Models Posts loaded.
+(2021-06-04 10:06:49) [DEBUG]: Models App\model\Auth init.
+(2021-06-04 10:06:49) [DEBUG]: Models App\model\Category init.
+(2021-06-04 10:06:49) [DEBUG]: Models App\model\Posts init.
+(2021-06-04 10:06:49) [DEBUG]: Application init.
+(2021-06-04 10:06:49) [DEBUG]: Router dispatch init.
+(2021-06-04 10:06:49) [DEBUG]: Views template init.
+(2021-06-04 10:06:49) [DEBUG]: Controllers init.
+(2021-06-04 10:06:49) [DEBUG]: Controller App\controller\HomeController init.
+(2021-06-04 10:06:49) [DEBUG]: Models App\model\Posts init.
+(2021-06-04 10:06:49) [DEBUG]: Views Models Auth loaded.
+(2021-06-04 10:06:49) [DEBUG]: Views Models Category loaded.
+(2021-06-04 10:06:49) [DEBUG]: Views Models Posts loaded.
+(2021-06-04 10:06:49) [DEBUG]: Models App\model\Auth init.
+(2021-06-04 10:06:49) [DEBUG]: Models App\model\Category init.
+(2021-06-04 10:06:49) [DEBUG]: Models App\model\Posts init.
+(2021-06-04 10:06:49) [DEBUG]: Application init.
+(2021-06-04 10:06:49) [DEBUG]: Router dispatch init.
+(2021-06-04 10:06:49) [DEBUG]: Views template init.
+(2021-06-04 10:06:49) [DEBUG]: Controllers init.
+(2021-06-04 10:06:49) [DEBUG]: Controller App\controller\HomeController init.
+(2021-06-04 10:06:49) [DEBUG]: Models App\model\Posts init.
+(2021-06-04 10:06:49) [DEBUG]: Views Models Auth loaded.
+(2021-06-04 10:06:49) [DEBUG]: Views Models Category loaded.
+(2021-06-04 10:06:49) [DEBUG]: Views Models Posts loaded.
+(2021-06-04 10:06:49) [DEBUG]: Models App\model\Auth init.
+(2021-06-04 10:06:49) [DEBUG]: Models App\model\Category init.
+(2021-06-04 10:06:49) [DEBUG]: Models App\model\Posts init.
+(2021-06-04 10:06:49) [DEBUG]: Application init.
+(2021-06-04 10:06:49) [DEBUG]: Router dispatch init.
+(2021-06-04 10:06:50) [DEBUG]: Views template init.
+(2021-06-04 10:06:50) [DEBUG]: Controllers init.
+(2021-06-04 10:06:50) [DEBUG]: Controller App\controller\HomeController init.
+(2021-06-04 10:06:50) [DEBUG]: Models App\model\Posts init.
+(2021-06-04 10:06:50) [DEBUG]: Views Models Auth loaded.
+(2021-06-04 10:06:50) [DEBUG]: Views Models Category loaded.
+(2021-06-04 10:06:50) [DEBUG]: Views Models Posts loaded.
+(2021-06-04 10:06:50) [DEBUG]: Models App\model\Auth init.
+(2021-06-04 10:06:50) [DEBUG]: Models App\model\Category init.
+(2021-06-04 10:06:50) [DEBUG]: Models App\model\Posts init.
+(2021-06-04 10:06:50) [DEBUG]: Application init.
+(2021-06-04 10:06:50) [DEBUG]: Router dispatch init.
+(2021-06-04 10:06:50) [DEBUG]: Views template init.
+(2021-06-04 10:06:50) [DEBUG]: Controllers init.
+(2021-06-04 10:06:50) [DEBUG]: Controller App\controller\Auth\Auth init.
+(2021-06-04 10:06:50) [DEBUG]: Models App\model\Auth init.
+(2021-06-04 10:06:50) [DEBUG]: Views Models Auth loaded.
+(2021-06-04 10:06:50) [DEBUG]: Views Models Category loaded.
+(2021-06-04 10:06:50) [DEBUG]: Models App\model\Auth init.
+(2021-06-04 10:06:50) [DEBUG]: Models App\model\Category init.
+(2021-06-04 10:06:50) [DEBUG]: Application init.
+(2021-06-04 10:06:50) [DEBUG]: Router dispatch init.
+(2021-06-04 10:06:50) [DEBUG]: Views template init.
+(2021-06-04 10:06:50) [DEBUG]: Controllers init.
+(2021-06-04 10:06:50) [DEBUG]: Controller App\controller\Auth\Auth init.
+(2021-06-04 10:06:50) [DEBUG]: Models App\model\Auth init.
+(2021-06-04 10:06:50) [DEBUG]: Models App\model\Auth init.
+(2021-06-04 10:06:50) [DEBUG]: Views Models Auth loaded.
+(2021-06-04 10:06:50) [DEBUG]: Views Models Category loaded.
+(2021-06-04 10:06:50) [DEBUG]: Models App\model\Auth init.
+(2021-06-04 10:06:50) [DEBUG]: Models App\model\Category init.
+(2021-06-04 10:06:50) [DEBUG]: Application init.
+(2021-06-04 10:06:50) [DEBUG]: Router dispatch init.
+(2021-06-04 10:06:50) [DEBUG]: Views template init.
+(2021-06-04 10:06:50) [DEBUG]: Controllers init.
+(2021-06-04 10:06:50) [DEBUG]: Controller App\controller\HomeController init.
+(2021-06-04 10:06:50) [DEBUG]: Models App\model\Posts init.
+(2021-06-04 10:06:50) [DEBUG]: Views Models Auth loaded.
+(2021-06-04 10:06:50) [DEBUG]: Views Models Category loaded.
+(2021-06-04 10:06:50) [DEBUG]: Views Models Posts loaded.
+(2021-06-04 10:06:50) [DEBUG]: Models App\model\Auth init.
+(2021-06-04 10:06:50) [DEBUG]: Models App\model\Category init.
+(2021-06-04 10:06:50) [DEBUG]: Models App\model\Posts init.
+(2021-06-04 10:06:50) [DEBUG]: Application init.
+(2021-06-04 10:06:50) [DEBUG]: Router dispatch init.
+(2021-06-04 10:06:50) [DEBUG]: Views template init.
+(2021-06-04 10:06:50) [DEBUG]: Controllers init.
+(2021-06-04 10:06:50) [DEBUG]: Controller App\controller\Subscribe init.
+(2021-06-04 10:06:50) [DEBUG]: Views Models Auth loaded.
+(2021-06-04 10:06:50) [DEBUG]: Views Models Category loaded.
+(2021-06-04 10:06:50) [DEBUG]: Models App\model\Auth init.
+(2021-06-04 10:06:50) [DEBUG]: Models App\model\Category init.
+(2021-06-04 10:06:50) [DEBUG]: Application init.
+(2021-06-04 10:06:50) [DEBUG]: Router dispatch init.
+(2021-06-04 10:06:50) [DEBUG]: Views template init.
+(2021-06-04 10:06:50) [DEBUG]: Controllers init.
+(2021-06-04 10:06:50) [DEBUG]: Controller App\controller\HomeController init.
+(2021-06-04 10:06:50) [DEBUG]: Models App\model\Posts init.
+(2021-06-04 10:06:50) [DEBUG]: Views Models Auth loaded.
+(2021-06-04 10:06:50) [DEBUG]: Views Models Category loaded.
+(2021-06-04 10:06:50) [DEBUG]: Views Models Posts loaded.
+(2021-06-04 10:06:50) [DEBUG]: Models App\model\Auth init.
+(2021-06-04 10:06:50) [DEBUG]: Models App\model\Category init.
+(2021-06-04 10:06:50) [DEBUG]: Models App\model\Posts init.
+(2021-06-04 10:06:50) [DEBUG]: Application init.
+(2021-06-04 10:06:50) [DEBUG]: Router dispatch init.
+(2021-06-04 10:06:57) [DEBUG]: Views template init.
+(2021-06-04 10:06:57) [DEBUG]: Controllers init.
+(2021-06-04 10:06:57) [DEBUG]: Controller App\controller\HomeController init.
+(2021-06-04 10:06:57) [DEBUG]: Models App\model\Posts init.
+(2021-06-04 10:06:57) [DEBUG]: Views Models Auth loaded.
+(2021-06-04 10:06:57) [DEBUG]: Views Models Category loaded.
+(2021-06-04 10:06:57) [DEBUG]: Views Models Posts loaded.
+(2021-06-04 10:06:57) [DEBUG]: Models App\model\Auth init.
+(2021-06-04 10:06:57) [DEBUG]: Models App\model\Category init.
+(2021-06-04 10:06:57) [DEBUG]: Models App\model\Posts init.
+(2021-06-04 10:06:57) [DEBUG]: Application init.
+(2021-06-04 10:06:57) [DEBUG]: Router dispatch init.
+(2021-06-04 10:06:57) [DEBUG]: Views template init.
+(2021-06-04 10:06:57) [DEBUG]: Controllers init.
+(2021-06-04 10:06:57) [DEBUG]: Controller App\controller\HomeController init.
+(2021-06-04 10:06:57) [DEBUG]: Models App\model\Posts init.
+(2021-06-04 10:06:57) [DEBUG]: Views Models Auth loaded.
+(2021-06-04 10:06:57) [DEBUG]: Views Models Category loaded.
+(2021-06-04 10:06:57) [DEBUG]: Views Models Posts loaded.
+(2021-06-04 10:06:57) [DEBUG]: Models App\model\Auth init.
+(2021-06-04 10:06:57) [DEBUG]: Models App\model\Category init.
+(2021-06-04 10:06:57) [DEBUG]: Models App\model\Posts init.
+(2021-06-04 10:06:57) [DEBUG]: Application init.
+(2021-06-04 10:06:57) [DEBUG]: Router dispatch init.

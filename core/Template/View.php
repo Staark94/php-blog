@@ -17,7 +17,7 @@ class View {
     protected static $ext = '.phtml';
     public static $title;
 	public static $model;
-    public static array $_vars = [];
+    public static $_vars = [];
     public static $_model;
 
     public static function renderLayout() {

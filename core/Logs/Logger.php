@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace Core\Logs;
 
 class Logger {
-    public static string $path = "";
+    public static $path = "";
 
     public static function debug(string $msg) {
         self::$path = APPPATH . "logs" . DIRECTORY_SEPARATOR;

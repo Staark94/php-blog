@@ -4,7 +4,7 @@ namespace App\model;
 use Core\Model;
 
 class Posts extends Model {
-    protected string $table = "posts";
+    protected $table = "posts";
     public function rules() : array { 
         return []; 
     }

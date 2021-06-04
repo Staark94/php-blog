@@ -54,8 +54,8 @@ class Router {
         ]
     ];
 
-    private static array $routes = [];
-    private static bool $ajax_request = false;
+    private static $routes = [];
+    private static $ajax_request = false;
 
     public static function get($path, $callback, $require_ajax = false) {
         self::$routes[self::METHOD_GET][$path] = $callback;

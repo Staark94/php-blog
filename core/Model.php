@@ -10,9 +10,9 @@ use Core\Logs\Logger;
 
 abstract class Model {
     protected $dbh;
-    protected array $fillable = [];
-    protected string $table = "";
-    protected array $errors = [];
+    protected $fillable = [];
+    protected $table = "";
+    protected $errors = [];
     protected static $instance;
 
     const RULE_REQUIRED = 'required';
