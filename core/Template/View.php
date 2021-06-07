@@ -21,14 +21,14 @@ class View {
     public static $_model;
 
     public static function renderLayout() {
-        global $localhost;
+        global $application_folder, $theme_folder, $localhost;
         
         if(file_exists(THEMES_PATH)) {
             /**
              * Store cache on views
              * @return string
              */
-            if(env('APP_TYPE') === "production") {
+            if(env('APP_ENV') === "production") {
                 // self::clearCache();
             }
 
@@ -59,7 +59,7 @@ class View {
             }
 
             $file = preg_replace("/{{ page_title }}/i", self::name(self::$title), $file);
-            $file = preg_replace("/{{ THEMES_PATH }}/i", $localhost, $file);
+            $file = preg_replace("/{{ THEMES_PATH }}/i", THEME_STYLES, $file);
 
             preg_match_all('/{% ?(parts) ?\'?(.*?)\'? ?%}/i', $file, $matches, PREG_SET_ORDER);
 
@@ -101,7 +101,7 @@ class View {
 
         $cached_file = CACHE_PATH . str_replace(array('/', '.phtml'), array('_', ''), session_id() . env('CACHE_PREFIX') . $file . '.php');
         
-        if(env('APP_TYPE') === "production") {
+        if(env('APP_ENV') === "production") {
             $code = self::renderFile($file, $data);
             $code = self::compileCode($code);
                         

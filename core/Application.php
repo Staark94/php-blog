@@ -5,25 +5,21 @@ namespace Core;
 use Core\Database\DB;
 use Core\Http\Router;
 use Core\Logs\Logger;
+use Core\Helpers\Url as URL;
 
 class Application {
-    public $config = [];
-
-    public function __construct(array $default = [])
-    {
-        $this->config = (object) $default;
-
-        return $this->config;
-    }
-
     public function initConnection() {
         return new DB();
     }
 
-    public function run() {
-        $this->initConnection();
-        Router::dispatch();
-        Logger::debug('Application init.');
-        Logger::debug('Router dispatch init.');
+    public function register() {
+        if(INSTALLED != false) {
+            $this->initConnection();
+            Router::dispatch();
+            Logger::debug('Application init.');
+            Logger::debug('Router dispatch init.');
+        } else {
+            URL::install_path();
+        }
     }
 }

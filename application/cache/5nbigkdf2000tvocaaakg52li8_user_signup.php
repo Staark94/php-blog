@@ -1,4 +1,4 @@
-<?php use \App\Model\Auth; $auth = new Auth(); use \App\Model\Category; $category = new Category(); use \App\Model\Posts; $posts = new Posts(); class_exists('Core\Template\View') or exit; ?>
+<?php use \App\Model\Auth; $auth = new Auth(); use \App\Model\Category; $category = new Category(); class_exists('Core\Template\View') or exit; ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -10,10 +10,10 @@
 	    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
         
         <!-- Custom styles for this template -->
-        <link href="http://php-blog.test/application\themes\bootstrapcss/headers.css" rel="stylesheet" />
-        <link href="http://php-blog.test/application\themes\bootstrapcss/style.css" rel="stylesheet" />
+        <link href="C:\Users\King Staark\Documents\GitHub\php-blog\application\themes\css/headers.css" rel="stylesheet" />
+        <link href="C:\Users\King Staark\Documents\GitHub\php-blog\application\themes\css/style.css" rel="stylesheet" />
 
-	    <title>PHP Blog -      Home Page</title>
+	    <title>PHP Blog -      Sign Up</title>
 
         <!-- Custom styles for this template -->
         <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900&amp;display=swap" rel="stylesheet">
@@ -139,47 +139,28 @@
 
 	    <main class="container">
             
-    <?php if($posts->getPosts()[0] && $posts->getPosts()[1]): ?>
-        <div class="row mb-2">
-        <?php foreach($posts->getPosts() as $index => $post): ?>
-            <?php if($index == 0 || $index == 1): ?>
-            <div class="col-md-6 blog-post">
-                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                    <div class="col p-4 d-flex flex-column position-static">
-                        <!-- <strong class="d-inline-block mb-2 text-success"><?php var_dump($posts->category($post->parentId ?? 0)); ?></strong> -->
-                        <h3 class="mb-0"><?php echo $post->title ?></h3>
-                        <div class="mb-1 text-muted"><?php echo date("F d", strtotime($post->createdAt)); ?></div>
-                        <p class="card-text mb-auto"><?php echo $post->summary ?></p>
-                        <a href="#" class="stretched-link">Continue reading...</a>
-                    </div>
-                    <div class="col-auto d-none d-lg-block">
-                        <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                    </div>
+    <div class="row m-5">
+        <div class="col-lg col-md-8 card p-2">
+            <form action="" method="post">
+                <?php if(self::getErrors()): ?>
+                <div class="alert alert-danger" role="alert">
+                    <strong><?php echo self::getErrors() ?></strong>
                 </div>
-            </div>
-            <?php endif; ?>
-        <?php endforeach; ?>
-        </div>
-    <?php endif; ?>
-    <div class="row g-5">
-        <div class="col-md-8">
-            <h3 class="pb-4 mb-4 fst-italic border-bottom">
-                From the Firehose
-            </h3>
-
-            <?php foreach($posts->getPosts() as $index => $post): ?>
-                <?php if($index > 1): ?>
-                <article class="blog-post">
-                    <h2 class="blog-post-title"><?php echo $post->title ?></h2>
-                    <p class="blog-post-meta"><?php echo date("F d, Y", strtotime($post->createdAt)); ?> by <a href="user/<?php echo $post->authorId ?>"><?php echo $posts->user($post->authorId) ?></a></p>
-                    <?php echo $posts->contents($post->content) ?>
-                </article>
                 <?php endif; ?>
-            <?php endforeach; ?>
-            <nav class="blog-pagination" aria-label="Pagination">
-                <a class="btn btn-outline-primary" href="#">Older</a>
-                <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">Newer</a>
-            </nav>
+                <div class="form-group">
+                    <label for="">Email</label>
+                    <input id="email" class="form-control" type="email" name="email" />
+                </div>
+
+                <div class="form-group">
+                    <label for="">Password</label>
+                    <input id="password" class="form-control" type="password" name="password" />
+                </div>
+
+                <div class="form-group mt-2">
+                    <input type="submit" name="login" value="Submit" class="btn btn-primary">
+                </div>
+            </form>
         </div>
     </div>
 

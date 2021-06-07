@@ -2,7 +2,7 @@
 namespace App\model;
 
 use Core\Model;
-
+use Core\Database\DB;
 class Posts extends Model {
     protected $table = "posts";
     public function rules() : array { 
@@ -34,10 +34,18 @@ class Posts extends Model {
         ->where(['id' => $id])
         ->results();
 
-        return "{$cat[0]->name}";
+        if(!empty($cat)) {
+            return "{$cat[0]->name}";
+        } else {
+            return "";
+        }
     }
 
     public function contents(string $content) {
         return htmlspecialchars_decode($content, ENT_COMPAT);
+    }
+
+    public static function created($params = []) {
+        return DB::getInstance()->insert('posts', $params);
     }
 }

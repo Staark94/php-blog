@@ -11,6 +11,7 @@ return array(
     '6124b4c8570aa390c21fafd04a26c69f' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
     '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => $vendorDir . '/symfony/polyfill-mbstring/bootstrap.php',
     'a4a119a56e50fbb293281d9a48007e0e' => $vendorDir . '/symfony/polyfill-php80/bootstrap.php',
+    'fd41d1848d522338791b609b17ea88e7' => $baseDir . '/core/Helpers/helpers.php',
     '81ac1be2f4c03ca8dbdfcb8267ac3027' => $baseDir . '/application/config/config.php',
     '8167b8f10b80fb99cea246539b77fe4a' => $baseDir . '/application/routes.php',
 );

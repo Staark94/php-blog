@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-use Core\Template\View;
+$config = array();
 
 $config['base_url'] = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on") ? "https" : "http");
 $config['base_url'] .= "://".$_SERVER['HTTP_HOST'];
@@ -41,3 +41,31 @@ $config['csrf_cookie_name'] = 'csrf_cookie_name';
 $config['csrf_expire'] = 7200;
 $config['csrf_regenerate'] = TRUE;
 $config['csrf_exclude_uris'] = array();
+
+
+/*
+|--------------------------------------------------------------------------
+| Cache Related Variables
+|--------------------------------------------------------------------------
+*/
+$config['cache_file'] = '';
+$config['cache_prefix'] = '';
+$config['cache_store'] = false;
+$config['cache_db'] = false;
+
+/*
+|--------------------------------------------------------------------------
+| Theme Related Variables Configuration
+|--------------------------------------------------------------------------
+*/
+$config['theme']['style'] = 'bootstrap';
+$config['theme']['path'] = 'themes';
+$config['theme']['layout'] = 'main';
+$config['theme']['parts'] = 'parts';
+
+/*
+|--------------------------------------------------------------------------
+| Language Related Variables Configuration
+|--------------------------------------------------------------------------
+*/
+$config['lang'] = 'english';

@@ -20,17 +20,16 @@ class DB {
     public $smtp;
 
     public function __construct() {
-        global $app;
-
         $options = [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
             PDO::ATTR_CASE => PDO::CASE_NATURAL,
             PDO::ATTR_ORACLE_NULLS => PDO::NULL_EMPTY_STRING
         ];
-        $config = $app->config->db;
-
+        
         try {
-            $this->smtp = new PDO($config->dns, $config->user, $config->pass);
+            // dbname=". env('DB_NAME') .";
+            $this->smtp = new PDO("mysql:host=". env('DB_HOST') .";port=" . env('DB_PORT'), env('DB_USER'), env('DB_PASS'), $options);
+            //$this->smtp->query('USE ' . env('DB_NAME'));
         } catch (\PDOException $e) {
             throw new DatabaseException('Failed to connect to MySQL Server - ' . $e->getMessage());
         }
@@ -48,6 +47,7 @@ class DB {
 
     public function query(string $sql, array $parameters = []) {
         $this->error = false;
+        $this->smtp->query('USE ' . env('DB_NAME'));
 
         // Prepare sql statement
         if ($this->query = $this->smtp->prepare($sql)) {
@@ -79,8 +79,10 @@ class DB {
      */
     public function insert(string $table_name = '*', array $parameters = []) {
         $this->error = false;
+        $this->smtp->query('USE ' . env('DB_NAME'));
+
         $keys = array_keys($parameters);
-        $values = array();
+        $values = array_values($parameters);
         $action = "INSERT INTO {$table_name}";
 
         if(is_null($table_name) || $table_name === "*") return ;
@@ -89,6 +91,8 @@ class DB {
          * Extract all parameters of array
          * implode and foreach
          */
+        $values = preg_replace("/^(.*?)$/i", "'$1'", $values);
+        
         if(is_array($parameters)) {
             for ($i = 0; $i < count($keys); $i++) {
                 if ($i < count($keys))
@@ -98,31 +102,17 @@ class DB {
             $action .= "(". implode(", ", $keys) .")";
         }
 
-        /**
-         * Create new string of params
-         * implode method
-         */
-        foreach($this->bindValues as $res) {
-            if(is_int($res)) {
-                $values[] .= $res;
-            } elseif(is_string($res)) {
-                $values[] .= "'". $res ."'";
-            } elseif(is_bool($res)) {
-                $values[] .= $res;
-            } else {
-                $values[] .= "'". $res ."'";
-            }
-        }
-
         $action .= " VALUES (". implode(',', $values) .")";
         
         if ($this->query = $this->smtp->prepare($action)) {
-            var_dump($this->query);
+            
             if ($this->query->execute()) {
+                $this->error = false;
                 $this->lastId = $this->smtp->lastInsertId();
+                var_dump($this->lastId);
             } else {
                 $this->error = true;
-                throw new DatabaseException("Failed to execute this query");
+                var_dump($this->smtp->errorInfo());
             }
         }
 
@@ -132,6 +122,7 @@ class DB {
     public function select($fields = "*") {
         $action = "";
         $this->query_string = "";
+        $this->smtp->query('USE ' . env('DB_NAME'));
 
         if (is_array($fields)) {
             $action = "SELECT ";
@@ -173,6 +164,7 @@ class DB {
     }
 
     public function get() {
+        $this->smtp->query('USE ' . env('DB_NAME'));
         if(is_null($this->query_string)) return;
         $sql = $this->query_string;
 
@@ -207,5 +199,9 @@ class DB {
 
     public function results() {
         return $this->get()->results;
+    }
+
+    public function rows() {
+        return $this->count;
     }
 }

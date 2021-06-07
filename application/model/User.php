@@ -2,12 +2,17 @@
 namespace App\model;
 
 use Core\Model;
+use Core\Database\DB;
 
 class User extends Model {
-    protected array $fillable = ['first_name', 'last_name', 'email', 'password', 'passwordConfirm'];
-    protected string $table = "users";
-    public array $errors = [];
+    protected $fillable = ['first_name', 'last_name', 'email', 'password', 'passwordConfirm', 'mobile'];
+    protected $table = "users";
+    public $errors = [];
+    public static $instance;
 
+    public function __construct() {
+        self::$instance = $this;
+    }
 
     public function rules() : array {
         return [
@@ -27,5 +32,9 @@ class User extends Model {
 
     public function acces() {
 
+    }
+
+    public static function created($params = []) {
+        return DB::getInstance()->insert('users', $params);
     }
 }

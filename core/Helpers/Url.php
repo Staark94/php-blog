@@ -14,4 +14,9 @@ class Url {
     public static function url_from(string $path, array $param = []) {
         return "{$path}/{$param[0]}";
     }
+
+    public static function install_path() {
+        header("Location: app.php?install&steep=1");
+        return true;
+    }
 }
