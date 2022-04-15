@@ -1,6 +1,18 @@
 # PHP Blog
 Clean PHP Open Source without framework
 
+## Demo & Preview
+![Main Page](https://github.com/Staark94/php-blog/blob/main/demo/Blog.PNG)
+![Main Page](https://github.com/Staark94/php-blog/blob/main/demo/Capture2.PNG)
+
+# Language Used
+ - PHP (82.6%)
+ - HTML (16.8%)
+ - Shell (0.6%)
+ - CSS
+ - Bootstrap Framework
+ - Javascript
+
 ## Future
  - Fasted Route System
  - Template System
@@ -54,7 +66,3 @@ Coming soon
 
 ## License
  - MIT
-
-## Demo & Preview
-![Main Page](https://github.com/Staark94/php-blog/blob/main/demo/Blog.PNG)
-![Main Page](https://github.com/Staark94/php-blog/blob/main/demo/Capture2.PNG)
